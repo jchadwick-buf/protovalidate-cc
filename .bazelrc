@@ -1,5 +1,10 @@
+# Enable platform-specific configuration.
+common --enable_platform_specific_config
+
 build --cxxopt=-std=c++17 --host_cxxopt=-std=c++17
 build --cxxopt=-fsized-deallocation
+
+build:windows --cxxopt=/std:c++17
 
 # Enable matchers in googletest
 build --define absl=1
